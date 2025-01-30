@@ -1,11 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BoardController;
 Route::get('/', function () {
-    return view('index');
-})->name('index'); // ✅ Ensures this route has the name "index"
-
-Route::get('', function () {
-    return redirect()->route('index'); // ✅ Redirects empty path to "/"
+    return redirect()->route('board.index');
 });
+Route::resource('board',BoardController::class)
+                ->only(['index','show']);
