@@ -19,7 +19,7 @@ class BoardController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
