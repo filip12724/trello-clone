@@ -19,10 +19,12 @@ Route::resource('board',BoardController::class)
 Route::middleware('guest')->group(function(){
 
     Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
-    
+    Route::get('/login',[AuthController::class,'showLoginForm'])->name('login');
 });
 
 Route::post('/register',[AuthController::class, 'register']);
+Route::post('/login',[AuthController::class,'login']);
+Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('dashboard',fn()=>view('components.dashboard'))
             ->middleware('auth')
