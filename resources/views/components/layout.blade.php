@@ -9,7 +9,7 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-    <body>
+    <body class="min-h-screen bg-gradient-to-br bg-linear-to-r from-cyan-200 via-blue-200 to-indigo-200">
        {{$slot}}
     </body>
 </html>

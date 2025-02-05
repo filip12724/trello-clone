@@ -1,6 +1,6 @@
 <x-layout>
     <x-layout>
-        <div class="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div class="min-h-screen  flex items-center justify-center">
           <form method="POST" action="{{ route('register') }}" class="bg-white p-8 rounded-lg shadow-md w-96">
             @csrf
             <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Create Account</h2>
