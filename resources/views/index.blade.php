@@ -17,11 +17,15 @@
                 @endguest
 
                 @auth
+                    <x-button href="/dashboard" class="px-4 py-2 text-sm mr-2">
+                        Dashboard
+                    </x-button>
+                    
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
                         <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                             Logout
-                        </button>
+                        </button>  
                     </form>
                 @endauth
             </div>
