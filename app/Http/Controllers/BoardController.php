@@ -19,7 +19,7 @@ class BoardController extends Controller
      */
     public function create()
     {
-       
+       return view ("boards.create");
     }
 
     /**
@@ -27,7 +27,7 @@ class BoardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

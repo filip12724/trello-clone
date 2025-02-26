@@ -3,21 +3,26 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Board;
+use Database\Factories\BoardFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        User::factory(50)->create();
-
-        User::factory()->create([
+        $filip = User::factory()->create([
             'name' => 'Filip',
             'email' => 'bondzulicfilip@gmail.com',
         ]);
+
+        Board::factory()
+            ->count(3)
+            ->for($filip)
+            ->create();
+
+        User::factory(50)->create();
+
+       
     }
 }

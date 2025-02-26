@@ -10,15 +10,15 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', [BoardController::class, 'index'])
-    ->middleware('auth')
-    ->name('boards.index');
-
-
+    ->name('boards.index')
+    ->middleware('auth');
 
 Route::resource('board', BoardController::class)
     ->middleware('auth');
 
-
+Route::get('/boards/create',[BoardController::class,'create'])
+    ->name('boards.create')
+    ->middleware('auth');
 
 Route::middleware('guest')->group(function(){
 
