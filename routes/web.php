@@ -16,7 +16,6 @@ Route::get('/dashboard', [BoardController::class, 'index'])
 
 
 Route::resource('board', BoardController::class)
-    ->only(['index', 'show'])
     ->middleware('auth');
 
 
